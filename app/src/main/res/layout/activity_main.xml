@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.samuel.booklisting.MainActivity">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status_text"
+        android:layout_below="@+id/progress_bar"
+        android:text="dummy"
+        android:textSize="15sp"
+        android:layout_centerInParent="true"
+        />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="enter your book search here "
+        android:id="@+id/search_text"
+        android:layout_gravity="center_horizontal"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_button"
+        android:text="@string/Search"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <ListView
+        android:id="@+id/search_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider ="@null"
+        android:dividerHeight="5dp">
+
+    </ListView>
+
+
+</LinearLayout>
+</RelativeLayout>

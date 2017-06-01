@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BookListing</string>
+    <string name="Title">Title : </string>
+    <string name="Search">search</string>
+    <string name="authors">Author(s) :</string>
+    <string name="publisher">Publisher(s) :</string>
+    <string name="description">Description :</string>
+</resources>
