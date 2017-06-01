@@ -27,6 +27,8 @@ public class FetchBookData {
         String publisher = "No available publisher";
         String description = "No available description";
         String authorNames = "No available author";
+        String image_link = "";
+        String book_link ="";
 
 
 
@@ -52,21 +54,24 @@ public class FetchBookData {
                             JSONArray authorArray = innerObject.getJSONArray("authors");
 
 
-                            authorNames = authorArray.toString().replace("[","").replace("\"","").replace("]","")+".";
-//                    for(int a = 0;a<authorArray.length();a++){
-//                          authorNameConts += authorArray.getString(a);
-//                    }
-//                    authorNames = authorNameConts.replace("[","").replace("]","");
-
-                        }
+                            authorNames = authorArray.toString().replace("[","").replace("\"","").replace("]","")+".";}
+//
                         if (innerObject.has("publisher")) {
                             publisher = innerObject.getString("publisher");
                         }
                         if (innerObject.has("description")) {
                             description = innerObject.getString("description");
                         }
+                        if(innerObject.has("imageLinks")){
+                            JSONObject imageObject = innerObject.getJSONObject("imageLinks");
+                            image_link = imageObject.getString("thumbnail");
 
-                        Books currentBook = new Books(title, publisher, description, authorNames);
+                        }
+                        if(innerObject.has("infoLink")){
+                            book_link = innerObject.getString("infoLink");
+                        }
+
+                        Books currentBook = new Books(title, publisher, description, authorNames,image_link,book_link);
                         mybook.add(currentBook);
                          publisher = "No available publisher";
                          description = "No available description";

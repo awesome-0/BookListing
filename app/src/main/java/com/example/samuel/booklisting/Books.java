@@ -5,14 +5,19 @@ package com.example.samuel.booklisting;
  */
 
 public class Books {
-    private String Title,Publisher,Description;
+    private String Title,Publisher,Description,image_link,book_link;
     private  String  authors ;
 
-    public Books(String mTitle,String mPublisher,String mDescription,String mauthor){
+
+
+    public Books(String mTitle, String mPublisher, String mDescription, String mauthor, String mimage_link,String mbook_link){
         Title = mTitle;
         Publisher = mPublisher;
         Description = mDescription;
         authors = mauthor;
+        image_link = mimage_link;
+        book_link = mbook_link;
+
 
     }
 
@@ -30,5 +35,13 @@ public class Books {
 
     public String getAuthors() {
         return authors;
+    }
+
+    public String getImage_link() {
+        return image_link;
+    }
+
+    public String getBook_link() {
+        return book_link;
     }
 }
